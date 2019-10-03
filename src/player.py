@@ -19,7 +19,8 @@ class Player:
             "But you don't have one of those!"
 
     def __str__(self):
-        return f'You are {self.name}, a foolish young {self.char_class} who is currently standing at the {self.location} of the cavern'
+        return f'''You are {self.name}, a foolish young {self.char_class} who is currently standing at the {self.location} of the cavern.
+        you are carrying {[i.name for i in self.inventory]}'''
     def __repr__(self):
         return f'Player({repr(self.name)},{repr(self.char_class)},{repr(self.location)},{repr(self.inventory)})'
 
